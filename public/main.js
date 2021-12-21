@@ -80,6 +80,7 @@ function createWindow() {
     minHeight: 600,
     title: "Launcher",
     frame: false,
+    icon: __dirname + '/rl.ico',
     webPreferences: {
       nodeIntegration: true,
       enableRemoteModule: true,
