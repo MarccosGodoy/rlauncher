@@ -1,0 +1,8 @@
+.disclamer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.disclamer p {
+  padding: 2em;
+}

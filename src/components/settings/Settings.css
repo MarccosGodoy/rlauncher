@@ -1,0 +1,115 @@
+.headers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 20vh;
+}
+.title {
+  border-bottom: 3px solid white;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.title.lol {
+  color: var(--lol);
+}
+.title.val {
+  color: var(--val);
+}
+.title.lor {
+  color: var(--lor);
+}
+h2 {
+  font-size: 1em;
+  margin-top: 0.3em;
+}
+
+.gamesPath {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.gamesPath form {
+  display: grid;
+  grid-template-rows: 1fr 5vh;
+  grid-template-columns: 5fr 1fr;
+  height: 16vh;
+  width: 90%;
+}
+.gameLabel {
+  grid-row: 1/2;
+  align-self: flex-end;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.gameLabel.lol {
+  color: var(--lol);
+}
+.gameLabel.val {
+  color: var(--val);
+}
+.gameLabel.lor {
+  color: var(--lor);
+}
+.gamesPath form input {
+  padding-left: 1em;
+  border: none;
+  outline: none;
+  grid-row: 2/3;
+  border-top-left-radius: 0.3em;
+  border-bottom-left-radius: 0.3em;
+  font-size: 1.1em;
+}
+.gameButton {
+  grid-row: 2/3;
+  border: none;
+  outline: none;
+  color: white;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+}
+.gameButton.lol {
+  background-color: var(--lol);
+}
+.gameButton.val {
+  background-color: var(--val);
+}
+.gameButton.lor {
+  background-color: var(--lor);
+}
+.language {
+  height: 20vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.langSwitcher {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 5.5em;
+  height: 5.5em;
+  border-radius: 1em;
+  margin: 0 1em;
+}
+.langSwitcher.lol {
+  border: 3px solid var(--lol);
+}
+.langSwitcher.val {
+  border: 3px solid var(--val);
+}
+.langSwitcher.lor {
+  border: 3px solid var(--lor);
+}
+.langSwitcher label {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}

@@ -1,0 +1,35 @@
+.support {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.supportUl {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.supportButton {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0;
+  height: 35%;
+  width: 80%;
+  border-radius: 0.7em;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+.supportButton.lol {
+  background-color: var(--lol);
+}
+.supportButton.val {
+  background-color: var(--val);
+}
+.supportButton.lor {
+  background-color: var(--lor);
+}

@@ -1,0 +1,9 @@
+.config {
+  display: grid;
+  grid-template-rows: 4vh 96vh;
+  grid-template-columns: 1fr 3fr;
+}
+
+.config main {
+  padding: 1em;
+}
