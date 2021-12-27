@@ -61,11 +61,11 @@
     "productName": "RLauncher",
     "win": {
       "target": "nsis",
-      "icon": "build/icon.ico"
+      "icon": "public/icon.ico"
     },
     "nsis": {
-      "installerIcon": "build/icon.ico",
-      "installerHeaderIcon": "build/icon.ico",
+      "installerIcon": "public/icon.ico",
+      "installerHeaderIcon": "public/icon.ico",
       "deleteAppDataOnUninstall": true
     }
   }
