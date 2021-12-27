@@ -1,3 +1,3 @@
-# rlauncher
+# RLauncher
 
 Download: https://github.com/MarccosGodoy/rlauncher/releases/tag/v1.0
