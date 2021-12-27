@@ -3,8 +3,35 @@ import { createContext, useEffect, useState } from "react";
 const LangContext = createContext();
 
 const translations = {
-  es: {},
-  en: {},
+  es: {
+    play: "Jugar",
+    config: "Configuracion",
+    support: "Apoyar",
+    social: "Social",
+    about: "Acerca de",
+    customLauncher: "Personalizar Launcher",
+    donate: "Donar",
+    supportProject: "Apoyar el proyecto",
+    card: "Tarjeta",
+    paypal:"Paypal",
+    contact: "Contactarme",
+    disclamer: "Disclamer"
+
+  },
+  en: {
+    play: "Play",
+    config: "Config",
+    support: "Support",
+    social: "Social",
+    about: "About",
+    customLauncher: "Customize Launcher",
+    donate: "Donate",
+    supportProject: "Support the project",
+    card: "Card",
+    paypal:"Paypal",
+    contact: "Contact Me",
+    disclamer: "Disclamer"
+  },
 };
 
 const LangProvider = ({ children }) => {

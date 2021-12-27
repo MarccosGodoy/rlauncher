@@ -8,10 +8,12 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import "./Social.css";
+import LangContext from "../../context/langContext";
 
 const { ipcRenderer } = window.require("electron");
 
 const Social = () => {
+  const { texts } = useContext(LangContext);
   const { game } = useContext(GameContext);
 
   const youtube = () => {
@@ -27,24 +29,32 @@ const Social = () => {
   return (
     <div>
       <header className="headers">
-        <h1 className={`title ${game}`}>Social</h1>
-        <h1>Contact Me</h1>
+        <h1 className={`title ${game}`}>{texts.social}</h1>
+        <h2>{texts.contact}</h2>
       </header>
       <section className="social">
         <ul className="socialUl">
           <li className={`socialContact ${game}`} onClick={youtube}>
-            <FontAwesomeIcon icon={faYoutube} />
+            <abbr title="Youtube">
+              <FontAwesomeIcon icon={faYoutube} />
+            </abbr>
           </li>
           <li className={`socialContact ${game}`}>
             <a href="mailto:maarcos29@gmail.com">
-              <FontAwesomeIcon icon={faEnvelopeOpenText} />
+              <abbr title="Gmail">
+                <FontAwesomeIcon icon={faEnvelopeOpenText} />
+              </abbr>
             </a>
           </li>
           <li className={`socialContact ${game}`} onClick={linkedin}>
-            <FontAwesomeIcon icon={faLinkedin} />
+            <abbr title="Linkedin">
+              <FontAwesomeIcon icon={faLinkedin} />
+            </abbr>
           </li>
           <li className={`socialContact ${game}`} onClick={discord}>
-            <FontAwesomeIcon icon={faDiscord} />
+            <abbr title="Discord">
+              <FontAwesomeIcon icon={faDiscord} />
+            </abbr>
           </li>
         </ul>
       </section>

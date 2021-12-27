@@ -11,14 +11,16 @@ import {
   faWindowMinimize,
 } from "@fortawesome/free-solid-svg-icons";
 import GameContext from "../../context/gameContext";
+import LangContext from "../../context/langContext";
 
 const { ipcRenderer } = window.require("electron");
 
 const Navbar = () => {
+  const { texts } = useContext(LangContext);
   const { handleGame, game } = useContext(GameContext);
 
   const handleClose = () => {
-    ipcRenderer.send("close"); 
+    ipcRenderer.send("close");
   };
 
   const handleMinimize = () => {
@@ -32,30 +34,36 @@ const Navbar = () => {
           onClick={() => {
             handleGame("lol");
           }}
-          className={game == "lol" ? "lol active" : "lol"}
+          className={game === "lol" ? "lol active" : "lol"}
         >
           <Link to="/">
-            <img src={lol} alt="" />
+            <abbr title="League of Legends">
+              <img src={lol} alt="" />
+            </abbr>
           </Link>
         </li>
         <li
           onClick={() => {
             handleGame("val");
           }}
-          className={game == "val" ? "val active" : "val"}
+          className={game === "val" ? "val active" : "val"}
         >
           <Link to="/">
-            <img src={val} alt="" />
+            <abbr title="Valorant">
+              <img src={val} alt="" />
+            </abbr>
           </Link>
         </li>
         <li
           onClick={() => {
             handleGame("lor");
           }}
-          className={game == "lor" ? "lor active" : "lor"}
+          className={game === "lor" ? "lor active" : "lor"}
         >
           <Link to="/">
-            <img src={lor} alt="" />
+            <abbr title="Legends of Runeterra">
+              <img src={lor} alt="" />
+            </abbr>
           </Link>
         </li>
       </ul>
@@ -63,7 +71,7 @@ const Navbar = () => {
       <ul className="actions">
         <li>
           <Link to="/config">
-            <FontAwesomeIcon icon={faCog} />
+            <abbr title={texts.config}><FontAwesomeIcon icon={faCog} /></abbr>
           </Link>
         </li>
         <li onClick={handleMinimize}>

@@ -7,10 +7,12 @@ import lorBackground from "../../assets/lorBackground.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlayCircle } from "@fortawesome/free-solid-svg-icons";
 import GameContext from "../../context/gameContext";
+import LangContext from "../../context/langContext";
 
 const { ipcRenderer } = window.require("electron");
 
 const Home = () => {
+  const { texts } = useContext(LangContext);
   const { game, path, handlePath } = useContext(GameContext);
   const [img, setImg] = useState(lolBackground);
 
@@ -91,7 +93,7 @@ const Home = () => {
           <li>
             <FontAwesomeIcon icon={faPlayCircle} />
           </li>
-          <li>Jugar</li>
+          <li>{texts.play}</li>
         </ul>
       </footer>
     </div>

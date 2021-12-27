@@ -3,16 +3,19 @@ import GameContext from "../../context/gameContext";
 import "./Settings.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import LangContext from "../../context/langContext";
 
 const { ipcRenderer } = window.require("electron");
 
 const Settings = () => {
+  const {texts, handleLanguage} = useContext(LangContext)
   const [lang, setLang] = useState("es");
   const { game, path, handlePath } = useContext(GameContext);
   const [pathing, setPathing] = useState(path);
 
   useEffect(() => {
     saveLang()
+    handleLanguage(lang)
   }, [lang]);
 
   const changePath = (e) => {
@@ -34,8 +37,8 @@ const Settings = () => {
   return (
     <div>
       <header className="headers">
-        <h1 className={`title ${game}`}>Config</h1>
-        <h2>Customize Launcher</h2>
+        <h1 className={`title ${game}`}>{texts.config}</h1>
+        <h2>{texts.customLauncher}</h2>
       </header>
 
       <section className="gamesPath">
